@@ -1,0 +1,34 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rich-black text-white font-sans antialiased;
+  }
+
+  /* Specific typography rules from specs */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Component */
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-xl;
+  }
+
+  /* Gradient Text Utility */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary-glow-start to-primary-glow-end bg-clip-text text-transparent;
+  }
+  
+  /* Background Blob Glow Effect */
+  .glow-blob {
+    @apply absolute rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-pulse;
+  }
+}

@@ -1,0 +1,47 @@
+---
+---
+<section class="min-h-screen flex items-center relative overflow-hidden pt-20">
+  <!-- Background Ambient Glows -->
+  <div class="glow-blob bg-primary-glow-start/20 w-96 h-96 top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="glow-blob bg-electric-blue/10 w-[30rem] h-[30rem] bottom-0 right-0 translate-x-1/3 translate-y-1/3 animation-delay-2000"></div>
+
+  <div class="max-w-7xl mx-auto px-4 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+    <!-- Left Column: Copy -->
+    <div class="space-y-6">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+        Escala tu autoridad con <br />
+        <span class="text-gradient-primary">Infraestructura Inteligente.</span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-white/60 font-medium max-w-lg">
+        Hector Pachano: Arquitecto de Sistemas GSEO & Marketing Predictivo.
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a href="#sistemas" class="group relative px-8 py-3 bg-white text-rich-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+          <span class="relative z-10">Ver Sistemas</span>
+        </a>
+        <a href="#contact" class="px-8 py-3 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-colors">
+          Contactar
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Image with Gradient Mask -->
+    <div class="relative h-[500px] md:h-[700px] w-full flex items-center justify-center">
+      <div class="relative w-full h-full max-w-md mx-auto">
+        <!-- Image Container -->
+        <div class="absolute inset-0 rounded-2xl overflow-hidden">
+             <!-- Placeholder or Real Image - Assuming /assets/profile.png or using a placeholder div if not present yet, but sticking to the plan -->
+             <img src="/assets/profile.png" alt="Hector Pachano" class="w-full h-full object-cover object-center" />
+             
+             <!-- Gradient Mask Overlay: Transparent center -> Rich Black edges -->
+             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,#050505_100%)]"></div>
+             
+             <!-- Bottom fade for extra seamlessness -->
+             <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-rich-black to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
