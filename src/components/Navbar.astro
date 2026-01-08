@@ -1,22 +1,39 @@
 ---
 ---
 <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/5 bg-rich-black/50 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between mx-auto p-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <span class="self-center text-xl font-bold tracking-tighter whitespace-nowrap text-white">HECTOR PACHANO</span>
     </a>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/5 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white/70 rounded hover:bg-white/5 md:hover:bg-transparent md:border-0 md:hover:text-primary-glow-start md:p-0 transition-colors">Sistemas</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-white/70 rounded hover:bg-white/5 md:hover:bg-transparent md:border-0 md:hover:text-primary-glow-start md:p-0 transition-colors">Blog</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-white/70 rounded hover:bg-white/5 md:hover:bg-transparent md:border-0 md:hover:text-primary-glow-start md:p-0 transition-colors">Sobre Mí</a>
-        </li>
-      </ul>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#sistemas" class="text-white/70 hover:text-primary-glow-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start focus-visible:ring-offset-2 focus-visible:ring-offset-rich-black rounded-sm">Sistemas</a>
+      <a href="/#about" class="text-white/70 hover:text-primary-glow-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start focus-visible:ring-offset-2 focus-visible:ring-offset-rich-black rounded-sm">Sobre Mí</a>
+      <a href="/blog" class="text-white/70 hover:text-primary-glow-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start focus-visible:ring-offset-2 focus-visible:ring-offset-rich-black rounded-sm">Blog</a>
+      <a href="/#contact" class="text-white/70 hover:text-primary-glow-start transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start focus-visible:ring-offset-2 focus-visible:ring-offset-rich-black rounded-sm">Contactar</a>
     </div>
+    <details class="md:hidden relative [&_summary::-webkit-details-marker]:hidden" data-mobile-nav>
+      <summary class="list-none inline-flex flex-col items-center justify-center gap-1 w-10 h-10 rounded-full border border-white/10 text-white/80 hover:text-white hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start focus-visible:ring-offset-2 focus-visible:ring-offset-rich-black" aria-label="Abrir menu de navegacion">
+        <span class="sr-only">Menu</span>
+        <span class="block w-5 h-0.5 bg-current"></span>
+        <span class="block w-5 h-0.5 bg-current"></span>
+        <span class="block w-5 h-0.5 bg-current"></span>
+      </summary>
+      <div class="absolute right-0 mt-3 w-48 glass-card p-2 shadow-lg">
+        <a href="/#sistemas" class="block px-3 py-2 rounded text-white/80 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start" data-mobile-link>Sistemas</a>
+        <a href="/#about" class="block px-3 py-2 rounded text-white/80 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start" data-mobile-link>Sobre Mí</a>
+        <a href="/blog" class="block px-3 py-2 rounded text-white/80 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start" data-mobile-link>Blog</a>
+        <a href="/#contact" class="block px-3 py-2 rounded text-white/80 hover:text-white hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-glow-start" data-mobile-link>Contactar</a>
+      </div>
+    </details>
   </div>
+  <script is:inline>
+    const mobileNav = document.querySelector('[data-mobile-nav]');
+    if (mobileNav) {
+      mobileNav.querySelectorAll('[data-mobile-link]').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileNav.removeAttribute('open');
+        });
+      });
+    }
+  </script>
 </nav>
